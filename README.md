@@ -9,7 +9,7 @@ Automatically organize your Gmail inbox by filing messages from specific senders
 Gmail's native filters are powerful but clunky — they require manual rule-by-rule configuration and lack automation for common patterns. **Inbox Cleaner** provides a simpler, faster alternative:
 
 | Feature | Gmail Filters | Inbox Cleaner |
-|---------|---|---|
+| --------- | --- | --- |
 | Auto-discover rules from existing labels | ❌ | ✅ |
 | Visual rule editor & management | ❌ | ✅ |
 | Bulk cleanup in one click | ❌ | ✅ |
@@ -43,18 +43,22 @@ Built on **Google Apps Script**, this add-on integrates seamlessly with Gmail wi
 ## � Common Use Cases
 
 **For newsletter junkies:**
+
 - Automatically file newsletters from Substack, Medium, Patreon, and Medium into a `Newsletters` label
 - Use keyword rules to catch digest emails that don't always come from the same sender
 
 **For notification management:**
+
 - Route GitHub notifications, CI/CD alerts, and monitoring emails into separate labels
 - Enable automated hourly cleanup to keep your inbox free of operational clutter
 
 **For teams managing multiple email accounts:**
+
 - Set up rules that match entire domains (`@company.com`, `@partner.org`)
 - Use bulk cleanup for periodic inbox maintenance across different label hierarchies
 
 **For label power users:**
+
 - Migrate and reorganize your label structure without losing email organization rules
 - Use the dry run feature to preview changes before committing to bulk operations
 
@@ -82,8 +86,8 @@ Built on **Google Apps Script**, this add-on integrates seamlessly with Gmail wi
 
 ```bash
 # Clone this repo
-git clone <your-repo-url>
-cd Mail\ Cleaner
+git clone https://github.com/zmongeau/Inbox-Cleaner.git
+cd Inbox-Cleaner
 
 # Log in to Google
 clasp login
