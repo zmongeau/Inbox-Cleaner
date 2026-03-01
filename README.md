@@ -1,14 +1,30 @@
 # 📧 Inbox Cleaner – Gmail Add-on
 
-Automatically organize your Gmail inbox by filing messages from specific senders (or entire domains) into labeled folders. Rules are stored in a JSON config file and can be **discovered automatically** from your existing label structure or added manually via a Gmail side-panel UI.
+Automatically organize your Gmail inbox by filing messages from specific senders (or entire domains) into labeled folders. Perfect for managing **newsletters**, **notifications**, **marketing emails**, and **bulk email organization**. Rules are stored in a JSON config file and can be **discovered automatically** from your existing label structure or added manually via a Gmail side-panel UI.
+
+---
+
+## ❓ Why Inbox Cleaner?
+
+Gmail's native filters are powerful but clunky — they require manual rule-by-rule configuration and lack automation for common patterns. **Inbox Cleaner** provides a simpler, faster alternative:
+
+| Feature | Gmail Filters | Inbox Cleaner |
+|---------|---|---|
+| Auto-discover rules from existing labels | ❌ | ✅ |
+| Visual rule editor & management | ❌ | ✅ |
+| Bulk cleanup in one click | ❌ | ✅ |
+| Test changes before applying (dry run) | ❌ | ✅ |
+| Track filing stats over time | ❌ | ✅ |
+
+Built on **Google Apps Script**, this add-on integrates seamlessly with Gmail without plugins or third-party services.
 
 ---
 
 ## ✨ Features
 
-- **🔍 Auto-Discovery** – Scans your existing labels and learns sender → label mappings
-- **🧹 Bulk Cleanup** – Sweeps your inbox and files all matching emails in one pass
-- **🌐 Domain Wildcards** – Use `@company.com` to match *everyone* from a domain
+- **🔍 Auto-Discovery** – Email automation that scans your existing labels and learns sender → label mappings automatically
+- **🧹 Bulk Cleanup** – Perform bulk email organization by sweeping your inbox and filing all matching threads in one pass
+- **🌐 Domain Wildcards** – Use `@company.com` patterns for rule-based filing that matches everyone from a domain
 - **📋 Rule Editor** – View, search, edit, and delete rules from the UI with pagination
 - **🔄 Smart Consolidation** – Automatically detects and merges similar rules to keep config lean
 - **⚡ Quick File** – One-click rule creation from the currently viewed email
@@ -16,15 +32,35 @@ Automatically organize your Gmail inbox by filing messages from specific senders
 - **🚫 Exclusion List** – Whitelist senders/domains to never auto-file, even if rules match
 - **🔑 Keyword Rules** – Match on subject-line keywords in addition to sender rules
 - **📊 Filing Stats** – Track how many threads each rule has filed over its lifetime
-- **⏰ Trigger Management** – Enable/disable hourly cleanup and daily discovery from the UI
-- **📦 Import/Export** – Backup and restore rules as timestamped Drive files
-- **🎨 Label Color Themes** – Apply consistent colors to label hierarchies
-- **♻️ Label Migration** – Rename/reorganize labels and automatically update rules
+- **⏰ Trigger Management** – Enable/disable hourly inbox automation and daily discovery from the UI
+- **📦 Import/Export** – Backup and restore your email organization rules as timestamped Drive files
+- **🎨 Label Color Themes** – Apply consistent colors to label hierarchies for better email management
+- **♻️ Label Migration** – Rename/reorganize labels and automatically update your email filtering rules
 - **⚡ Optimized** – Batch API calls and timeout protection prevent script failures
 
 ---
 
-## 🚀 Setup
+## � Common Use Cases
+
+**For newsletter junkies:**
+- Automatically file newsletters from Substack, Medium, Patreon, and Medium into a `Newsletters` label
+- Use keyword rules to catch digest emails that don't always come from the same sender
+
+**For notification management:**
+- Route GitHub notifications, CI/CD alerts, and monitoring emails into separate labels
+- Enable automated hourly cleanup to keep your inbox free of operational clutter
+
+**For teams managing multiple email accounts:**
+- Set up rules that match entire domains (`@company.com`, `@partner.org`)
+- Use bulk cleanup for periodic inbox maintenance across different label hierarchies
+
+**For label power users:**
+- Migrate and reorganize your label structure without losing email organization rules
+- Use the dry run feature to preview changes before committing to bulk operations
+
+---
+
+## �🚀 Setup
 
 ### 1. Prerequisites
 
@@ -68,6 +104,8 @@ clasp push
 ---
 
 ## 📖 How It Works
+
+Built with **Google Apps Script** and the **Gmail API**, Inbox Cleaner automates email filtering through three core phases:
 
 ### Core Workflow
 
